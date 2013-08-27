@@ -4,11 +4,12 @@
 #HTTP 200 response code and sends an email if it does not.
 
 #Create variable
+#Put below your URL you want to test 
 URL=scriptrock.com
 GET_CODE=`curl -I $URL | grep "HTTP" | awk '{print $2}'`
 
 
-#Put bellow the mail recipient and the mail sender
+#Put below the mail recipient and the mail sender
 TO=laurent.ta08@gmail.com
 FROM=laurent.ta08@gmail.com
 
@@ -16,7 +17,7 @@ FROM=laurent.ta08@gmail.com
 #Create fonction to check if Sendmail is already installed
 
 function isSendmailAlreadyInstalled() {
-	dpkg -s php >/dev/null 2>&1
+	dpkg -s sendmail >/dev/null 2>&1
         if [[ "$?" == "1" ]]; then
         	sudo apt-get install -y sendmail
 
