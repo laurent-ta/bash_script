@@ -41,8 +41,8 @@ if [ $GET_CODE != 200 ]; then
 
         echo $URL "return a" $GET_CODE "code"
         echo "From: \"Laurent\"  <$FROM>" > /tmp/message
-        echo "To: \"Zillow\" <$TO>" >> /tmp/message
-        echo "Subject: [Zillow Alert] Code error from the HTTP request" >> /tmp/message
+        echo "To: \"Someone\" <$TO>" >> /tmp/message
+        echo "Subject: [Alert] Code error from the HTTP request" >> /tmp/message
         echo "MIME-Version: 1.0" >> /tmp/message
         echo "Content-Type: text/plain" >> /tmp/message
         echo "" >> /tmp/message
